@@ -45,4 +45,155 @@ Design a user registration form with the following requirements:
 **Example Output:**  
 A user-friendly registration form that prevents submission if required fields are not filled correctly.  
 
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Webpage and Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #444;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #5cb85c;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #4cae4c;
+    }
+    .form-group-inline {
+      display: flex;
+      align-items: center;
+    }
+    .form-group-inline label {
+      margin-right: 10px;
+    }
+    .terms {
+      display: flex;
+      align-items: center;
+    }
+    .terms input {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multimedia Webpage</h1>
+    
+    <h2>Audio</h2>
+    <audio controls>
+      <source src="audio-file.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>Video</h2>
+    <video controls poster="poster-image.jpg">
+      <source src="video-file.mp4" type="video/mp4">
+      <source src="video-file.webm" type="video/webm">
+      Your browser does not support the video element.
+    </video>
+  </div>
+
+  <div class="container">
+    <h1>Registration Form</h1>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" required maxlength="50">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="8">
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="18" required>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="form-group-inline">
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Male</label>
+          
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+          
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+      </div>
+
+      <div class="form-group terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the Terms and Conditions</label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
 ---
